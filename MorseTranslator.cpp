@@ -1,9 +1,18 @@
+//========< MorseTranslator.cpp >========= //
+// Description: From string to morse code 
+// Author: u$3r_h0n3$t
+// Version: 1.0
+// Updated: 20.06.23
+// ======================================= //
+
+// ====< Libraries > ============ // 
 #include <iostream>
 #include <map>
 #include <string>
 
+// main function // 
 int main() {
-  // Morse code dictionary
+  //===  Morse code dictionary === /// 
   std::map<char, std::string> morse_code = {
       {'A', ".-"}, {'B', "-..."}, {'C', "-.-."}, {'D', "-.."}, {'E', "."},
       {'F', "..-."}, {'G', "--."}, {'H', "...."}, {'I', ".."}, {'J', ".---"},
@@ -17,12 +26,12 @@ int main() {
       {'(', "-.--."}, {')', "-.--.-"}
   };
 
-  // Get the input string from the user
+  // === Get the input string from the user == // 
   std::string input_string;
   std::cout << "Enter a string: ";
   std::getline(std::cin, input_string);
 
-  // Generate the Morse code
+  // ==  Generate the morse code == // 
   std::string output;
   for (char c : input_string) {
     c = toupper(c);
@@ -35,9 +44,11 @@ int main() {
     }
   }
 
-  // Display the result
+  // === Print result on screen === // 
   std::cout << "Morse code: " << output << std::endl;
 
   return 0;
 }
+
+//==== end of file  ===== // 
 
